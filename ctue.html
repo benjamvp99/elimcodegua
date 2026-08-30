@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iglesia Elim Codegua | Misión Cristiana</title>
+
+    <!-- PALETA DE COLORES EDITABLE EN VS CODE -->
+    <style>
+        :root {
+            /* Tonos Primarios Oscuros */
+            --color-bg-body: #0f0a0d;         /* Fondo principal oscuro moderno */
+            --color-surface-dark: #1b1217;    /* Fondo de secciones oscuras */
+            --color-surface-card: #251820;    /* Fondo tarjetas oscuras */
+            --color-border-subtle: rgba(244, 63, 94, 0.15); /* Bordes suaves */
+
+            /* Colores de Marca y Resplandor */
+            --color-brand-accent: #e11d48;    /* Rojo / Rosado vibrante */
+            --color-brand-glow: rgba(225, 29, 72, 0.25);
+            
+            /* Tipografía y Acentos Dorados/Cálidos */
+            --color-text-main: #fcfaf8;       /* Texto blanco cálido */
+            --color-text-muted: #a89da4;      /* Texto secundario */
+            --color-warm-gold: #fde68a;       /* Dorado suave */
+            --color-warm-hover: #fef08a;      /* Hover botón */
+        }
+    </style>
+
+    <!-- Tailwind CSS con Variables Mapeadas -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        theme: {
+                            body: 'var(--color-bg-body)',
+                            surface: 'var(--color-surface-dark)',
+                            card: 'var(--color-surface-card)',
+                            border: 'var(--color-border-subtle)',
+                            accent: 'var(--color-brand-accent)',
+                            glow: 'var(--color-brand-glow)',
+                            text: 'var(--color-text-main)',
+                            muted: 'var(--color-text-muted)',
+                            gold: 'var(--color-warm-gold)',
+                            goldHover: 'var(--color-warm-hover)',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--color-border-subtle);
+        }
+    </style>
+</head>
+<body class="bg-theme-body text-theme-text selection:bg-theme-accent selection:text-white antialiased">
+
+    <!-- BARRA DE NAVEGACIÓN MODERNA FLOTANTE -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-theme-body/80 border-b border-theme-border">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <img src="imagelogo.png" alt="Logo Elim Codegua" class="h-9 w-auto object-contain">
+                <span class="font-extrabold text-lg tracking-tight uppercase bg-gradient-to-r from-theme-gold to-white bg-clip-text text-transparent">Elim Codegua</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-theme-muted">
+                <a href="#inicio" class="hover:text-theme-text transition">Inicio</a>
+                <a href="#radio" class="hover:text-theme-text transition">Radio</a>
+                <a href="#horarios" class="hover:text-theme-text transition">Reuniones</a>
+                <a href="#envivo" class="hover:text-theme-text transition">Transmisiones</a>
+                <a href="#ofrendas" class="hover:text-theme-text transition">Oraciones</a>
+                <a href="#contacto" class="hover:text-theme-text transition">Contacto</a>
+            </nav>
+
+            <a href="https://wa.me/56979865721" target="_blank" class="bg-theme-gold hover:bg-theme-goldHover text-black font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg shadow-theme-gold/10 flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-sm"></i> Escríbenos
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO PRINCIPAL MODERNO -->
+    <section id="inicio" class="relative pt-24 pb-20 px-6 text-center overflow-hidden">
+        <!-- Resplandor de fondo -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-theme-accent/15 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-theme-border bg-theme-surface/60 backdrop-blur-md mb-8">
+                <span class="w-2 h-2 rounded-full bg-theme-accent animate-ping"></span>
+                <span class="text-theme-gold text-xs font-bold uppercase tracking-widest">Templo Elim Codegua</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                Bienvenidos a <span class="bg-gradient-to-r from-theme-gold via-white to-theme-gold bg-clip-text text-transparent">Casa</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-theme-muted max-w-xl mx-auto font-light mb-10 tracking-wide uppercase text-xs">
+                Un oasis de esperanza
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#radio" class="bg-theme-accent hover:opacity-90 text-white font-bold px-8 py-4 rounded-xl transition flex items-center justify-center gap-3 shadow-xl shadow-theme-accent/25 transform hover:-translate-y-0.5 text-sm uppercase tracking-wider">
+                    <i class="fa-solid fa-radio text-base"></i> Escuchar Radio
+                </a>
+                <a href="#horarios" class="glass-card hover:bg-white/5 text-theme-text font-bold px-8 py-4 rounded-xl transition text-sm uppercase tracking-wider">
+                    Nuestras Reuniones
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- REPRODUCTOR DE RADIO FLOTANTE -->
+    <section id="radio" class="py-12 px-6">
+        <div class="max-w-4xl mx-auto glass-card p-6 md:p-8 rounded-3xl shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
+            
+            <div class="flex items-center gap-5 text-center md:text-left">
+                <div class="w-16 h-16 rounded-2xl bg-theme-accent/10 border border-theme-accent/20 flex items-center justify-center text-2xl text-theme-accent flex-shrink-0">
+                    <i class="fa-solid fa-tower-broadcast"></i>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 justify-center md:justify-start mb-1">
+                        <span id="radio-dot" class="w-2.5 h-2.5 rounded-full bg-neutral-600"></span>
+                        <span id="radio-status" class="text-[11px] font-bold text-theme-muted uppercase tracking-widest">Radio Desconectada</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-theme-text">Radio Elim Codegua</h3>
+                    <p class="text-xs text-theme-muted">Alabanzas y predicación continua las 24 horas</p>
+                </div>
+            </div>
+
+            <button id="playBtn" onclick="toggleRadio()" class="bg-theme-gold hover:bg-theme-goldHover text-black font-extrabold px-8 py-4 rounded-2xl flex items-center gap-3 transition-all duration-200 shadow-lg shadow-theme-gold/15 transform active:scale-95 text-xs uppercase tracking-wider">
+                <i id="playIcon" class="fa-solid fa-play text-sm"></i>
+                <span id="btnText">Escuchar en Vivo</span>
+            </button>
+
+            <audio id="radioStream" preload="none">
+                <source src="https://audio3.tustreaming.cl/7210/stream" type="audio/mpeg">
+            </audio>
+        </div>
+    </section>
+
+    <!-- HORARIOS DE CULTOS / REUNIONES -->
+    <section id="horarios" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3">Nuestras Reuniones</h2>
+            <p class="text-theme-muted text-sm max-w-md mx-auto">Te invitamos a compartir juntos en la Palabra, adoración y oración.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Culto General -->
+            <div class="glass-card p-8 rounded-3xl hover:border-theme-accent/40 transition-all duration-300 hover:-translate-y-1">
+                <div class="w-12 h-12 bg-white/5 border border-theme-border rounded-xl flex items-center justify-center mb-6 text-theme-gold text-lg">
+                    <i class="fa-solid fa-book-bible"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Culto General</h3>
+                <p class="text-theme-gold font-semibold text-xs uppercase tracking-wider mb-3"><i class="fa-regular fa-clock mr-1"></i> Domingo — 11:00 hrs</p>
+                <p class="text-theme-muted text-sm leading-relaxed">Tiempo central de alabanza, mensaje de la Palabra y comunión familiar.</p>
+            </div>
+
+            <!-- Culto de Oración -->
+            <div class="glass-card p-8 rounded-3xl hover:border-theme-accent/40 transition-all duration-300 hover:-translate-y-1">
+                <div class="w-12 h-12 bg-white/5 border border-theme-border rounded-xl flex items-center justify-center mb-6 text-theme-gold text-lg">
+                    <i class="fa-solid fa-hands-praying"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Culto Semanal</h3>
+                <p class="text-theme-gold font-semibold text-xs uppercase tracking-wider mb-3"><i class="fa-regular fa-clock mr-1"></i> Miércoles — 19:30 hrs</p>
+                <p class="text-theme-muted text-sm leading-relaxed">Nos unimos como congregación para clamar por las familias y necesidades.</p>
+            </div>
+
+            <!-- Reunión de Jóvenes -->
+            <div class="glass-card p-8 rounded-3xl hover:border-theme-accent/40 transition-all duration-300 hover:-translate-y-1">
+                <div class="w-12 h-12 bg-white/5 border border-theme-border rounded-xl flex items-center justify-center mb-6 text-theme-gold text-lg">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Reunión de Jóvenes</h3>
+                <p class="text-theme-gold font-semibold text-xs uppercase tracking-wider mb-3"><i class="fa-regular fa-clock mr-1"></i> Sábado — 18:00 hrs</p>
+                <p class="text-theme-muted text-sm leading-relaxed">Un espacio dinámico de alabanza, crecimiento espiritual y compañerismo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRANSMISIONES EN VIVO (YOUTUBE & FACEBOOK) -->
+    <section id="envivo" class="py-24 px-6 border-t border-theme-border bg-theme-surface/40">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="inline-flex items-center gap-2 bg-red-600/10 border border-red-500/20 text-red-400 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> Streaming Online
+            </span>
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3">Sigue nuestras Transmisiones</h2>
+            <p class="text-theme-muted text-sm mb-12 max-w-lg mx-auto">Si no puedes asistir de manera presencial, conéctate a los servicios en vivo.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- YouTube -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col items-center justify-between hover:border-red-500/30 transition">
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-14 bg-red-500/10 text-red-500 rounded-2xl flex items-center justify-center text-3xl mb-5 border border-red-500/20">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Canal de YouTube</h3>
+                        <p class="text-theme-muted text-xs mb-8 max-w-xs">
+                            Prédicas completas, transmisiones en directo y alabanzas grabadas.
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/@ictuecodegua" target="_blank" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 px-6 rounded-xl text-xs uppercase tracking-wider transition shadow-lg shadow-red-600/20 flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-youtube text-sm"></i> Ver en YouTube
+                    </a>
+                </div>
+
+                <!-- Facebook -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col items-center justify-between hover:border-blue-500/30 transition">
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-14 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center text-3xl mb-5 border border-blue-500/20">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Facebook Live</h3>
+                        <p class="text-theme-muted text-xs mb-8 max-w-xs">
+                            Comenta en vivo, comparte el mensaje y conéctate con la comunidad.
+                        </p>
+                    </div>
+                    <a href="https://www.facebook.com/ictue.codegua" target="_blank" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl text-xs uppercase tracking-wider transition shadow-lg shadow-blue-600/20 flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-facebook-f text-sm"></i> Ver en Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PETICIONES DE ORACIÓN -->
+    <section id="ofrendas" class="py-24 max-w-4xl mx-auto px-6">
+        <div class="glass-card p-8 md:p-12 rounded-3xl text-center relative overflow-hidden">
+            <div class="w-14 h-14 bg-theme-accent/10 border border-theme-accent/20 text-theme-accent rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <h2 class="text-3xl font-extrabold mb-3">Peticiones de Oración</h2>
+            <p class="text-theme-muted text-sm max-w-lg mx-auto mb-8 italic">
+                "Confesaos vuestras ofensas unos a otros, y orad unos por otros, para que seáis sanados." — Santiago 5:16
+            </p>
+
+            <div class="bg-black/30 p-6 rounded-2xl text-left max-w-md mx-auto border border-theme-border text-xs font-mono space-y-3">
+                <div>
+                    <span class="text-theme-muted font-sans block text-[11px]">Escríbela al número de WhatsApp:</span>
+                    <strong class="text-theme-gold text-sm">+56 9 79865721</strong>
+                </div>
+                <div>
+                    <span class="text-theme-muted font-sans block text-[11px]">Titular:</span>
+                    <strong class="text-white">Iglesia Elim Codegua</strong>
+                </div>
+                <div>
+                    <span class="text-theme-muted font-sans block text-[11px]">Correo de contacto:</span>
+                    <strong class="text-white">contacto@elimcodegua.com</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN & CONTACTO -->
+    <section id="contacto" class="py-24 px-6 border-t border-theme-border">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">Visítanos en Codegua</h2>
+                <div class="space-y-6 text-sm mb-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-xl bg-white/5 border border-theme-border flex items-center justify-center text-theme-gold flex-shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-white mb-0.5">Dirección:</strong>
+                            <span class="text-theme-muted text-xs">Codegua #628, Región del Libertador General Bernardo O'Higgins, Chile</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-xl bg-white/5 border border-theme-border flex items-center justify-center text-theme-gold flex-shrink-0">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-white mb-0.5">WhatsApp de Contacto:</strong>
+                            <span class="text-theme-muted text-xs">+56 9 79865721</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card h-64 rounded-3xl border border-theme-border flex items-center justify-center text-center p-8">
+                <div>
+                    <i class="fa-solid fa-map-location-dot text-theme-gold text-4xl mb-3"></i>
+                    <p class="text-theme-muted text-xs mb-5">Ubicados en Codegua #628, Chile</p>
+                    <a href="https://www.google.com/maps/place/Estancilla+628,+Codegua,+O'Higgins/@-34.0354456,-70.6609749,17z/data=!3m1!4b1!4m6!3m5!1s0x966347a4db9f72eb:0xcd7b560f4a6742ed!8m2!3d-34.0354456!4d-70.6584!16s%2Fg%2F11sr6pg04x?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="bg-theme-gold hover:bg-theme-goldHover text-black font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider transition inline-block">
+                        Abrir en Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 text-center text-xs text-theme-muted border-t border-theme-border">
+        <p>© 2026 Templo Elim Codegua.</p>
+    </footer>
+
+    <!-- SCRIPT DEL REPRODUCTOR DE RADIO -->
+    <script>
+        const radio = document.getElementById('radioStream');
+        const playBtn = document.getElementById('playBtn');
+        const playIcon = document.getElementById('playIcon');
+        const btnText = document.getElementById('btnText');
+        const radioStatus = document.getElementById('radio-status');
+        const radioDot = document.getElementById('radio-dot');
+
+        let isPlaying = false;
+
+        function toggleRadio() {
+            if (isPlaying) {
+                radio.pause();
+                playIcon.className = "fa-solid fa-play text-sm";
+                btnText.innerText = "Escuchar en Vivo";
+                radioStatus.innerText = "Radio Desconectada";
+                radioStatus.className = "text-[11px] font-bold text-theme-muted uppercase tracking-widest";
+                radioDot.className = "w-2.5 h-2.5 rounded-full bg-neutral-600";
+                isPlaying = false;
+            } else {
+                radio.play();
+                playIcon.className = "fa-solid fa-pause text-sm";
+                btnText.innerText = "Pausar Radio";
+                radioStatus.innerText = "Transmitiendo en Vivo";
+                radioStatus.className = "text-[11px] font-bold text-theme-gold uppercase tracking-widest";
+                radioDot.className = "w-2.5 h-2.5 rounded-full bg-theme-gold animate-ping";
+                isPlaying = true;
+            }
+        }
+    </script>
+
+</body>
+</html>
